@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-image: linear-gradient(135deg, #000000, #0077B5, #773399);
+    background-size: cover;
+    color: #E5E5E5;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .section-header {
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  .section-header::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #f82249;
+    bottom: 0;
+    left: calc(50% - 25px);
+  }
+  
+  .section-header h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .section-header p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #9195a2;
+  }
+  
+  .section-with-bg {
+    background-color: #f6f7fd;
+  }
+  
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  
+  #header {
+    height: 90px;
+    padding: 25px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 997;
+  }
+  
+  #header.header-scrolled,
+  #header.header-fixed {
+    background: rgba(6, 12, 34, 0.98);
+    height: 70px;
+    padding: 15px 0;
+    transition: all 0.5s;
+  }
+  
+  #header #logo h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 6px 0;
+    line-height: 1;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  #header #logo h1 span {
+    color: #f82249;
+  }
+  
+  #header #logo h1 a,
+  #header #logo h1 a:hover {
+    color: #fff;
+  }
+  
+  #header #logo img {
+    padding: 0;
+    margin: 0;
+    max-height: 40px;
+  }
+  
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-menu li {
+    margin: 0 10px;
+  }
+  
+  .nav-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: #E5E5E5;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .nav-menu a:hover {
+    background-color: rgba(119, 51, 153, 0.6);
+  }
+  
+  .header {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #E5E5E5;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .inscription-section {
+    padding: 60px 0;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .inscription-section h2 {
+    margin-bottom: 40px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #3b82f6;
+  }
+  
+  form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  form button:hover {
+    background-color: #2563eb;
+  }
+  
+  footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #E5E5E5;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .inscription-section {
+      text-align: left;
+    }
+  
+    .inscription-section h2 {
+      text-align: center;
+    }
+  
+    .form-group {
+      width: 50%;
+      float: left;
+      margin-right: 20px;
+    }
+  
+    .form-group:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+  /* Ajoutez cette classe à l'en-tête lors du défilement */
+.scrolled-header {
+    background-color: rgba(34, 38, 56, 0.8); /* Bleu foncé transparent */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Modifiez la couleur du texte du logo lors du défilement (optionnel) */
+  .scrolled-header #logo a img {
+    filter: brightness(1.5); /* Augmente la luminosité de l'image du logo */
+    transition: filter 0.3s ease-in-out;
+  }
+  
